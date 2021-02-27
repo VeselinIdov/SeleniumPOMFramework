@@ -10,7 +10,33 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <suiteXmlFile>src/main/resources/testing.xml</suiteXmlFile>
     </properties>
+    <build>
+        <plugins>
+            <!-- Compiler plug-in -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+<!--                <configuration>-->
+<!--                    <source>12.0.1</source>-->
+<!--                    <target>12.0.1</target>-->
+<!--                </configuration>-->
+            </plugin>
+            <!-- Below plug-in is used to execute tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <!-- TestNG suite XML files -->
+                        <suiteXmlFile>testing.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -45,7 +71,6 @@
             <version>3.0.0-M5</version>
             <type>maven-plugin</type>
         </dependency>
-
     </dependencies>
 
 </project>

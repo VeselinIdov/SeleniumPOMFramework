@@ -46,7 +46,6 @@ public class runningTests extends BaseTest {
         elementsPage.getSearchField().sendKeys("Cierra");
         getWait().until(ExpectedConditions.visibilityOf(elementsPage.getAssertSearchData()));
         waitForSeconds(5);
-        driver().manage().deleteAllCookies();
 
     }
 }

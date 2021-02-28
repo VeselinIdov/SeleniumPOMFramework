@@ -9,7 +9,7 @@ class PropertyManager {
     private String chooseBrowser;
     private String baseURL;
 
-        //Creating instance/object of a class
+    //Creating instance/object of a class
     static PropertyManager getProperty() {
         PropertyManager property = new PropertyManager();
         property.loadData();

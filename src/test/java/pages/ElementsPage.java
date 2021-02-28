@@ -4,6 +4,8 @@ import configurations.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class ElementsPage extends BasePage {
 
 	@FindBy(xpath = "//ul[contains(@class, \"menu-list\")]//span[contains(text(), 'ext Box')]")
@@ -27,9 +29,6 @@ public class ElementsPage extends BasePage {
 	@FindBy(xpath = "//button[@id=\"submit\"]")
 	private WebElement submitButton;
 
-	@FindBy(xpath = "//div[@id=\"output\"][//text()[contains(text(),'testUser') or contains(., 'test@email.ee')]]")
-	private WebElement outPutData;
-
 	@FindBy(xpath = "//ul[contains(@class, \"menu-list\")]//span[contains(text(), 'adio Button')]")
 	private WebElement radioButtonNav;
 
@@ -45,28 +44,21 @@ public class ElementsPage extends BasePage {
 	@FindBy(xpath = "//div[contains(@role,\"rowgroup\")]//div[contains(@class, \"rt-td\") and contains(text(), 'Cierra')]")
 	private WebElement assertSearchData;
 
-	@FindBy(xpath = "")
-	private WebElement testNotContainsLocator;
+	@FindBy(xpath = "//ul[contains(@class, \"menu-list\")]//span[contains(text(), 'ractice Form')]")
+	private WebElement practiseFormNav;
+
+	@FindBy(xpath = "//select[@id=\"first\"]")
+	private WebElement clickDropDown;
+
+	@FindBy(xpath = "//select[@id=\"first\"]//option")
+	private List<WebElement> dropDownValues;
 
 
-
-
-
-
-
-
-
-    public ElementsPage() {
-        super();
-    }
 
     public WebElement getTextBoxtNav() {
         return textBoxtNav;
     }
 
-    public WebElement getElementsPageText() {
-        return elementsPageText;
-    }
 
     public WebElement getUsernameInput() {
         return usernameInput;
@@ -88,10 +80,6 @@ public class ElementsPage extends BasePage {
         return submitButton;
     }
 
-    public WebElement getOutPutData() {
-        return outPutData;
-    }
-
     public WebElement getRadioButtonNav() {
         return radioButtonNav;
     }
@@ -110,5 +98,13 @@ public class ElementsPage extends BasePage {
 
     public WebElement getAssertSearchData() {
         return assertSearchData;
+    }
+
+    public WebElement getClickDropDown() {
+        return clickDropDown;
+    }
+
+    public List<WebElement> getDropDownValues() {
+        return dropDownValues;
     }
 }

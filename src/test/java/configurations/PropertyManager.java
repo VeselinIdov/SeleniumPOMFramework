@@ -21,7 +21,7 @@ class PropertyManager {
 
         //Read configuration.properties file
         try {
-            prop.load(new FileInputStream("E:\\SeleniumFramework\\config.properties"));
+            prop.load(new FileInputStream("config.properties"));
         } catch (IOException e) {
             System.out.println("Configuration properties file cannot be found");
         }

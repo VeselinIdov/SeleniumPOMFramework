@@ -20,17 +20,17 @@ public class runningTests extends BaseTest {
 
         ElementsPage elementsPage = new ElementsPage();
 
-        JavascriptExecutor executor = (JavascriptExecutor) driver();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", demoQAPage.getElementsPage());
 
         elementsPage.getRadioButtonNav().click();
-        getWait().until(ExpectedConditions.visibilityOf(elementsPage.getRadioButtonYes()));
+        getWait.until(ExpectedConditions.visibilityOf(elementsPage.getRadioButtonYes()));
         elementsPage.getRadioButtonYes().click();
 
         elementsPage.getWebTablesNav().click();
-        getWait().until(ExpectedConditions.visibilityOf(elementsPage.getSearchField()));
+        getWait.until(ExpectedConditions.visibilityOf(elementsPage.getSearchField()));
         elementsPage.getSearchField().sendKeys("Cierra");
-        getWait().until(ExpectedConditions.visibilityOf(elementsPage.getAssertSearchData()));
+        getWait.until(ExpectedConditions.visibilityOf(elementsPage.getAssertSearchData()));
         waitForSeconds(5);
     }
 
@@ -41,7 +41,7 @@ public class runningTests extends BaseTest {
 
         ElementsPage elementsPage = new ElementsPage();
 
-        JavascriptExecutor executor = (JavascriptExecutor) driver();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", demoQAPage.getElementsPage());
 
         elementsPage.getTextBoxtNav().click();

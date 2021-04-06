@@ -11,16 +11,8 @@ import java.util.Random;
 
 public class BaseTest {
 
-    protected WebDriver driver() {
-
-        return WebDriverConfig.driver;
-    }
-
-    protected WebDriverWait getWait() {
-
-        WebDriverWait wait = new WebDriverWait(WebDriverConfig.driver, 15);
-        return wait;
-    }
+    protected WebDriver driver =  WebDriverConfig.chooseDriver(PropertyManager.getProperty().getChooseBrowser());
+    protected WebDriverWait getWait = WebDriverConfig.getWait();
 
     protected void waitForSeconds(int timeoutInSeconds) {
 
@@ -49,10 +41,10 @@ public class BaseTest {
     @BeforeMethod
     public void startMethod() {
 
-        WebDriverConfig.chooseDriver(PropertyManager.getProperty().getChooseBrowser());
-        driver().navigate().to(PropertyManager.getProperty().getBaseURL());
-        driver().manage().deleteAllCookies();
-        driver().manage().window().maximize();
+
+        driver.navigate().to(PropertyManager.getProperty().getBaseURL());
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
     }
 
     @AfterMethod
@@ -60,6 +52,6 @@ public class BaseTest {
 
         ScreenShotOnFailure screenShotOnFailure = new ScreenShotOnFailure();
         screenShotOnFailure.takeSnapShot();
-        driver().quit();
+        driver.quit();
     }
 }

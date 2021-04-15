@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 class WebDriverConfig {
 
-    static WebDriver driver;
-    static WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
     private WebDriverConfig() {
     }
 
-    static WebDriver chooseDriver(String browser) {
+     static WebDriver chooseDriver(String browser) {
 
         if (driver == null) {
 

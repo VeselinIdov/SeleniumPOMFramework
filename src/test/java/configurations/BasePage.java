@@ -11,7 +11,7 @@ public abstract class BasePage {
 
 
     public BasePage() {
-        PageFactory.initElements(WebDriverConfig.driver, this);
+        PageFactory.initElements(WebDriverConfig.chooseDriver(PropertyManager.getProperty().getChooseBrowser()), this);
     }
 
 

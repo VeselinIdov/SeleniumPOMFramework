@@ -47,11 +47,18 @@ public class ElementsPage extends BasePage {
 	@FindBy(xpath = "//ul[contains(@class, \"menu-list\")]//span[contains(text(), 'ractice Form')]")
 	private WebElement practiseFormNav;
 
-	@FindBy(xpath = "//select[@id=\"first\"]")
+	@FindBy(xpath = "//select[contains(@id,\"testingDropdown\")]")
 	private WebElement clickDropDown;
 
-	@FindBy(xpath = "//select[@id=\"first\"]//option")
+	@FindBy(xpath = "//select[contains(@id,\"testingDropdown\")]/option")
 	private List<WebElement> dropDownValues;
+
+
+	public void pillPage(String username, String email){
+
+	    this.usernameInput.sendKeys(username);
+	    this.emailInput.sendKeys(email);
+    }
 
 
 

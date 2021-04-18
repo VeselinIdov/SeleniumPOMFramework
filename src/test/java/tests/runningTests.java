@@ -2,15 +2,18 @@ package tests;
 
 import configurations.BaseTest;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import pages.DemoQAPage;
 import pages.ElementsPage;
 
+import java.util.List;
+import java.util.Random;
+
 public class runningTests extends BaseTest {
-
-
 
 
     @Test
@@ -35,7 +38,7 @@ public class runningTests extends BaseTest {
     }
 
     @Test
-    void practiseForm(){
+    void practiseForm() {
 
         DemoQAPage demoQAPage = new DemoQAPage();
 
@@ -46,12 +49,27 @@ public class runningTests extends BaseTest {
 
         elementsPage.getTextBoxtNav().click();
 
-        elementsPage.getUsernameInput().sendKeys(randomData("test"));
-        elementsPage.getEmailInput().sendKeys(randomData("@email.ee"));
+        elementsPage.pillPage(randomData("dd"), randomData("ee"));
+
+        waitForSeconds(5);
         elementsPage.getCurrentAddress().sendKeys(randomData("currentAddress"));
         elementsPage.getPernamentAddress().sendKeys(randomData("pernamentAddress"));
         elementsPage.getSubmitButton().click();
 
         waitForSeconds(5);
+    }
+
+    @Test
+    void testDropdown() {
+
+        ElementsPage elementsPage = new ElementsPage();
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", elementsPage.getClickDropDown());
+        elementsPage.getClickDropDown().click();
+
+        selectRandomValueFromDropDown(elementsPage.getClickDropDown(), elementsPage.getDropDownValues());
+        System.out.println(selectRandomValueFromDropDown(elementsPage.getClickDropDown(), elementsPage.getDropDownValues()));
+
     }
 }

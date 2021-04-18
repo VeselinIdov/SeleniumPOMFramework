@@ -29,13 +29,15 @@ public class BaseTest {
         return value + text;
     }
 
-    protected void selectRandomValueFromDropDown(WebElement clickOnDropDown, List<WebElement> selectValueFromDropDown) {
+    protected String selectRandomValueFromDropDown(WebElement clickOnDropDown, List<WebElement> selectValueFromDropDown) {
 
         clickOnDropDown.click();
         Random rand = new Random();
         int options = selectValueFromDropDown.size();
         int list = rand.nextInt(options);
         selectValueFromDropDown.get(list).click();
+
+        return selectValueFromDropDown.get(list).getText();
     }
 
     @BeforeMethod

@@ -3,7 +3,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class BasePage {
+public class BasePage {
 
 	@FindBy(css = "dsdas")
 	private WebElement globalTest;

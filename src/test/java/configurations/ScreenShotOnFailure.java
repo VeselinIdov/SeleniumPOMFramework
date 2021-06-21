@@ -6,10 +6,10 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
-class ScreenShotOnFailure {
+class ScreenShotOnFailure{
 
     void takeSnapShot() {
-        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getProperty().getChooseBrowser()));
+        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getChooseBrowser()));
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
         File DestFile = new File("E:\\SeleniumFramework\\images\\" + System.currentTimeMillis() + ".png");
         try {

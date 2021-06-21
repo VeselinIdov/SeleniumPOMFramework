@@ -2,22 +2,18 @@ package tests;
 
 import configurations.BaseTest;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import pages.DemoQAPage;
 import pages.ElementsPage;
-
-import java.util.List;
-import java.util.Random;
 
 public class runningTests extends BaseTest {
 
 
     @Test
     void demoQAPractise() {
+
 
         DemoQAPage demoQAPage = new DemoQAPage();
 

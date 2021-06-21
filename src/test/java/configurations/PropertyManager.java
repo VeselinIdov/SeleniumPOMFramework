@@ -6,17 +6,13 @@ import java.io.IOException;
 
 class PropertyManager {
 
-    private String chooseBrowser;
-    private String baseURL;
+    private static String chooseBrowser;
+    private static String baseURL;
 
-    //Creating instance/object of a class
-    static PropertyManager getProperty() {
-        PropertyManager property = new PropertyManager();
-        property.loadData();
-        return property;
+    private PropertyManager() {
     }
 
-    private void loadData() {
+    static {
         Properties prop = new Properties();
 
         //Read configuration.properties file
@@ -31,11 +27,11 @@ class PropertyManager {
         baseURL = prop.getProperty("baseURL");
     }
 
-    String getChooseBrowser() {
+    static String getChooseBrowser() {
         return chooseBrowser;
     }
 
-    String getBaseURL() {
+    static String getBaseURL() {
         return baseURL;
     }
 

@@ -9,9 +9,10 @@ import org.testng.annotations.BeforeMethod;
 import java.util.List;
 import java.util.Random;
 
-public class BaseTest {
+public class BaseTest{
 
-    protected WebDriver driver =  WebDriverConfig.chooseDriver(PropertyManager.getProperty().getChooseBrowser());
+
+    protected WebDriver driver =  WebDriverConfig.chooseDriver(PropertyManager.getChooseBrowser());
     protected WebDriverWait getWait = WebDriverConfig.getWait();
 
     protected void waitForSeconds(int timeoutInSeconds) {
@@ -44,7 +45,7 @@ public class BaseTest {
     public void startMethod() {
 
 
-        driver.navigate().to(PropertyManager.getProperty().getBaseURL());
+        driver.navigate().to(PropertyManager.getBaseURL());
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }

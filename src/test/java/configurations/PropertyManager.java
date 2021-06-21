@@ -9,9 +9,6 @@ class PropertyManager {
     private static String chooseBrowser;
     private static String baseURL;
 
-    private PropertyManager() {
-    }
-
     static {
         Properties prop = new Properties();
 

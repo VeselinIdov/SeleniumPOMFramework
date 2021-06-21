@@ -11,7 +11,7 @@ class ScreenShotOnFailure{
     void takeSnapShot() {
         TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getChooseBrowser()));
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-        File DestFile = new File("E:\\SeleniumFramework\\images\\" + System.currentTimeMillis() + ".png");
+        File DestFile = new File("images\\" + System.currentTimeMillis() + ".png");
         try {
             FileUtils.copyFile(SrcFile, DestFile);
         } catch (IOException e) {

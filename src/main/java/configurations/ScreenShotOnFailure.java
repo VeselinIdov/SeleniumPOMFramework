@@ -1,15 +1,15 @@
 package configurations;
 
-import org.apache.commons.io.FileUtils;
+import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
-class ScreenShotOnFailure{
+class ScreenShotOnFailure {
 
-    void takeSnapShot() {
-        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getChooseBrowser()));
+    static void takeSnapShot() {
+        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getBrowserType()));
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
         File DestFile = new File("images\\" + System.currentTimeMillis() + ".png");
         try {

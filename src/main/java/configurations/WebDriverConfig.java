@@ -1,8 +1,7 @@
 package configurations;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 class WebDriverConfig {
@@ -13,16 +12,15 @@ class WebDriverConfig {
     private WebDriverConfig() {
     }
 
-     static WebDriver chooseDriver(String browser) {
-
+    static WebDriver chooseDriver(String browser) {
         if (driver == null) {
 
             switch (browser) {
                 case "chrome":
-                    driver = new ChromeDriver();
+                    driver = WebDriverManager.chromedriver().create();
                     break;
                 case "firefox":
-                    driver = new FirefoxDriver();
+                    driver = WebDriverManager.firefoxdriver().create();
                     break;
             }
         }
@@ -31,7 +29,7 @@ class WebDriverConfig {
 
     static WebDriverWait getWait() {
         if (wait == null) {
-            wait = new WebDriverWait(driver, 10);
+            wait = new WebDriverWait(chooseDriver(PropertyManager.getBrowserType()), 10);
         }
         return wait;
     }

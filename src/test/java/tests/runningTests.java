@@ -8,15 +8,17 @@ public class runningTests extends BaseTest {
 
     @Test
     void testDropdown()throws Exception  {
-
         ElementsPage elementsPage = new ElementsPage();
         elementsPage.selectProductByName();
     }
 
     @Test
-    void secondTest2() throws Exception {
+    void testDropdown1()throws Exception  {
+        System.out.println("Test 2");
+    }
 
-        ElementsPage elementsPage = new ElementsPage();
-        elementsPage.selectProductByName();
+    @Test
+    void testDropdown2()throws Exception  {
+        System.out.println("Test 3");
     }
 }

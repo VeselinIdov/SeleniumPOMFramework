@@ -1,10 +1,14 @@
 package configurations;
 
-import org.openqa.selenium.support.PageFactory;
+import utils.WaitUtility;
+import utils.WebUtility;
 
-abstract public class BasePage {
+public class BasePage {
+    protected WaitUtility waitUtility;
+    protected WebUtility webUtility;
 
     public BasePage() {
-        PageFactory.initElements(BaseTest.driver, this);
+        this.waitUtility = new WaitUtility(BaseTest.driver);
+        this.webUtility = new WebUtility(BaseTest.driver);
     }
 }

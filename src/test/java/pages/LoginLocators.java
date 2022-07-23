@@ -9,11 +9,6 @@ public class LoginLocators extends BasePage {
 	@FindBy(xpath = "//*[@id=\"jot-ui-searchInput\"]")
 	private WebElement username;
 
-    public LoginLocators() {
-        super();
-    }
-
-
     public WebElement getUsername() {
         return username;
     }

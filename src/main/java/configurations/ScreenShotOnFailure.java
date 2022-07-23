@@ -9,7 +9,7 @@ import java.io.IOException;
 class ScreenShotOnFailure {
 
     static void takeSnapShot() {
-        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverConfig.chooseDriver(PropertyManager.getBrowserType()));
+        TakesScreenshot scrShot = ((TakesScreenshot) BaseTest.driver);
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
         File DestFile = new File("images\\" + System.currentTimeMillis() + ".png");
         try {

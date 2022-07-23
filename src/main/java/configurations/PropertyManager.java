@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 class PropertyManager {
+
     private static String browserType;
     private static String baseURL;
 

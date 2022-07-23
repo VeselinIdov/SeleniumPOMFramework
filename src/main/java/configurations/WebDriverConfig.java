@@ -2,35 +2,42 @@ package configurations;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 class WebDriverConfig {
 
     private static WebDriver driver;
-    private static WebDriverWait wait;
 
     private WebDriverConfig() {
     }
 
-    static WebDriver chooseDriver(String browser) {
-        if (driver == null) {
-
-            switch (browser) {
-                case "chrome":
-                    driver = WebDriverManager.chromedriver().create();
-                    break;
-                case "firefox":
-                    driver = WebDriverManager.firefoxdriver().create();
-                    break;
-            }
+    private static WebDriver chooseDriver(String browser) {
+        switch (browser) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                driver.manage().window().maximize();
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                driver.manage().window().maximize();
+                break;
         }
         return driver;
     }
 
-    static WebDriverWait getWait() {
-        if (wait == null) {
-            wait = new WebDriverWait(chooseDriver(PropertyManager.getBrowserType()), 10);
+    static WebDriver getDriver() {
+        if (null == chooseDriver(PropertyManager.getBrowserType())) {
+            driver = chooseDriver(PropertyManager.getBrowserType());
         }
-        return wait;
+        return driver;
+    }
+
+    static void quitDriver() {
+        if (null != driver) {
+            driver.quit();
+        }
     }
 }

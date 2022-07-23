@@ -1,22 +1,17 @@
 package pages;
 
 import configurations.BasePage;
-import configurations.WebActions;
+import configurations.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import java.util.List;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ElementsPage extends BasePage {
 
-    private final By productNames = By.cssSelector("[class=\"product-name\"]");
+    private final By productNames = By.cssSelector("[class=\"newsletters\"]");
 
     public void selectProductByName() {
-        List<WebElement> element = WebActions.getAllElements(productNames);
-
-        for (WebElement element1 : element) {
-            if (element1.getText().equals("Printed Chiffon Dress")) {
-                element1.click();
-            }
-        }
+        waitUtility.getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(productNames));
+        BaseTest.driver.switchTo();
+        webUtility.clickElement(productNames);
     }
 }

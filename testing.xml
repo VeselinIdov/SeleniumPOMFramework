@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="SeleniumFramework">
+<suite name="SeleniumFramework" parallel="classes" thread-count="2">
 
-    <test name="packageTests" >
+    <test name="tests" >
         <classes>
             <class name="tests.runningTests" />
+            <class name="tests.runningTests2" />
         </classes>
     </test>
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 class WebDriverConfig {
 
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     private WebDriverConfig() {
     }
@@ -16,28 +16,30 @@ class WebDriverConfig {
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                driver.manage().window().maximize();
+                driver.set(new ChromeDriver());
+                driver.get().manage().window().maximize();
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                driver.manage().window().maximize();
+                driver.set(new FirefoxDriver());
+
+                driver.get().manage().window().maximize();
                 break;
         }
-        return driver;
+        return driver.get();
     }
 
     static WebDriver getDriver() {
         if (null == chooseDriver(PropertyManager.getBrowserType())) {
-            driver = chooseDriver(PropertyManager.getBrowserType());
+            driver.set(chooseDriver(PropertyManager.getBrowserType()));
         }
-        return driver;
+        return driver.get();
     }
 
     static void quitDriver() {
         if (null != driver) {
-            driver.quit();
+            driver.get().quit();
+            driver.remove();
         }
     }
 }

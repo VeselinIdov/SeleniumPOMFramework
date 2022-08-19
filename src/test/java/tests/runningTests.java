@@ -8,8 +8,8 @@ public class runningTests extends BaseTest {
 
     @Test
     void testDropdown()throws Exception  {
-        ElementsPage elementsPage = new ElementsPage();
-        elementsPage.selectProductByName();
+        System.out.println("Test 1");
+
     }
 
     @Test
@@ -20,5 +20,10 @@ public class runningTests extends BaseTest {
     @Test
     void testDropdown2()throws Exception  {
         System.out.println("Test 3");
+    }
+
+    @Test
+    void testDropdown3()throws Exception  {
+        System.out.println("Test 4");
     }
 }

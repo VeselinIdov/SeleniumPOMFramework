@@ -11,8 +11,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void testSetup() {
-        driver = WebDriverConfig.getDriver();
-        driver.navigate().to(PropertyManager.getBaseURL());
+        driver = WebDriverFactory.getDriver();
+        driver.navigate().to(PropertyManager.getInstance().getValue("url.base"));
         Session.clearLocalStorage();
         Session.clearSessionStorage();
     }
@@ -20,6 +20,6 @@ public class BaseTest {
     @AfterMethod
     public void closeTests() {
         ScreenShotOnFailure.takeSnapShot();
-        WebDriverConfig.quitDriver();
+        WebDriverFactory.quitDriver();
     }
 }

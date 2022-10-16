@@ -1,17 +1,18 @@
 package configurations;
 
+import configurations.config.ConfigurationManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
-class WebDriverFactory {
+public class WebDriverFactory {
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     private WebDriverFactory() {
     }
 
-    private static WebDriver createDriverInstance(String browser) {
-        switch (browser) {
+    public static void createDriverInstance() {
+        switch (ConfigurationManager.configuration().getBrowser()) {
             case "chrome":
                 driver.set(WebDriverManager.chromedriver().create());
                 driver.get().manage().window().maximize();
@@ -21,17 +22,13 @@ class WebDriverFactory {
                 driver.get().manage().window().maximize();
                 break;
         }
+    }
+
+    public static WebDriver getDriver() {
         return driver.get();
     }
 
-    static WebDriver getDriver() {
-        if (null == createDriverInstance(PropertyManager.getInstance().getValue("browser"))) {
-            driver.set(createDriverInstance(PropertyManager.getInstance().getValue("browser")));
-        }
-        return driver.get();
-    }
-
-    static void quitDriver() {
+    public static void quitDriver() {
         if (null != driver.get()) {
             driver.get().quit();
             driver.remove();

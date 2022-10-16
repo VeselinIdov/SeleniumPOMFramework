@@ -1,28 +1,32 @@
 package tests;
 
-import configurations.BaseTest;
 import org.testng.annotations.Test;
+import pages.HomePage;
 
 public class runningTests2 extends BaseTest {
 
     @Test
     void testDropdown() {
-        System.out.println("Test 1");
+        HomePage homePage = new HomePage();
+        homePage.clickOnElement();
+        System.out.println( Thread.currentThread().getId());
 
     }
 
     @Test
     void testDropdown1()  {
-        System.out.println("Test 2");
+        HomePage homePage = new HomePage();
+        homePage.clickOnElement();
+        System.out.println( Thread.currentThread().getId());
     }
 
     @Test
     void testDropdown2() {
-        System.out.println("Test 3");
-    }
+        HomePage homePage = new HomePage();
+        homePage.clickOnElement();    }
 
     @Test
     void testDropdown3(){
-        System.out.println("Test 4");
-    }
+        HomePage homePage = new HomePage();
+        homePage.clickOnElement();    }
 }

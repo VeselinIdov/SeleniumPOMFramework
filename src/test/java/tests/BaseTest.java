@@ -27,6 +27,7 @@ public class BaseTest {
     @AfterMethod
     public void closeTests() {
         ScreenShotOnFailure.takeSnapShot();
+        AllureManager.takeScreenshotToAttachOnAllureReport();
         WebDriverFactory.quitDriver();
     }
 }

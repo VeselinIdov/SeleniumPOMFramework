@@ -18,8 +18,8 @@ public class runningTests extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.clickOnElement();
         homePage.getText();
-        Thread.sleep(10000);
-        System.out.println(Thread.currentThread().getId());
+        System.out.println( Thread.currentThread().getId());
+
 
     }
 
@@ -27,6 +27,7 @@ public class runningTests extends BaseTest {
     void testDropdown1() {
         HomePage homePage = new HomePage();
         homePage.clickOnElement();
-        System.out.println(Thread.currentThread().getId());
+        System.out.println( Thread.currentThread().getId());
+
     }
 }

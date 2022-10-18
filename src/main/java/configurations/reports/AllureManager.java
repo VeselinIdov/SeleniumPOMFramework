@@ -21,4 +21,9 @@ public class AllureManager {
                         put("Local browser", configuration().getBrowser()).
                         build());
     }
+
+    @Attachment(value = "Failed test screenshot", type = "image/png")
+    public static byte[] takeScreenshotToAttachOnAllureReport() {
+        return ((TakesScreenshot) WebDriverFactory.getDriver()).getScreenshotAs(BYTES);
+    }
 }

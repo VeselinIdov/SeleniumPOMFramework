@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import utils.Session;
 
-public class BaseTest {
+public abstract class BaseTest {
 
     @BeforeSuite
     public void beforeSuite() {

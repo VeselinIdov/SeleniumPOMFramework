@@ -1,28 +1,32 @@
 package utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
 public class WebUtility {
 
     private WebDriver driver;
+    private WaitUtility waitUtility;
 
-    public WebUtility(WebDriver driver) {
+    public WebUtility(WebDriver driver, WaitUtility waitUtility) {
         this.driver = driver;
+        this.waitUtility = waitUtility;
     }
 
     public void clickElement(By elementBy) {
+        waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementBy));
         getElementLocator(elementBy).click();
     }
 
     public void enterText(By elementBy, String text) {
+        getElementLocator(elementBy).sendKeys(Keys.CONTROL + "a");
+        getElementLocator(elementBy).sendKeys(Keys.DELETE);
         getElementLocator(elementBy).sendKeys(text);
     }
 
-    private WebElement getElementLocator(By elementBy) {
+    public WebElement getElementLocator(By elementBy) {
         return driver.findElement(elementBy);
     }
 
@@ -32,5 +36,10 @@ public class WebUtility {
 
     public String getElementText(By locator) {
         return getElementLocator(locator).getText();
+    }
+
+    public void scrollToElementView(By by) {
+        WebElement elementToScroll = driver.findElement(by);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
     }
 }

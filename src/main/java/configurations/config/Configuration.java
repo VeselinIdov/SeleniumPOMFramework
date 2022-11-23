@@ -16,4 +16,7 @@ public interface Configuration extends Config {
 
     @Key("url.base")
     String getUrl();
+
+    @Key("api.url.base")
+    String getApiURL();
 }

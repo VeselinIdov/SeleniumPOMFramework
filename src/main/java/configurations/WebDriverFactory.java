@@ -15,13 +15,14 @@ public class WebDriverFactory {
         switch (ConfigurationManager.configuration().getBrowser()) {
             case "chrome":
                 driver.set(WebDriverManager.chromedriver().create());
-                driver.get().manage().window().maximize();
                 break;
             case "firefox":
                 driver.set(WebDriverManager.firefoxdriver().create());
-                driver.get().manage().window().maximize();
                 break;
+            default:
+                throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
+          driver.get().manage().window().maximize();
     }
 
     public static WebDriver getDriver() {

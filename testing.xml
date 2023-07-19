@@ -4,8 +4,7 @@
 
     <test name="tests" >
         <classes>
-            <class name="tests.runningTests" />
-            <class name="tests.runningTests2" />
+            <class name="tests.RunningTests" />
         </classes>
     </test>
 

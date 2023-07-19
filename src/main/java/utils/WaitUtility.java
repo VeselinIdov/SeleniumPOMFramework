@@ -22,7 +22,7 @@ public class WaitUtility {
     }
 
     public WebDriverWait getWebDriverWait() {
-        return webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        return webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     public void visibilityOfElement(By locator, int seconds) {
@@ -34,10 +34,9 @@ public class WaitUtility {
     public void visibilityOfElementNOFail(By locator, int seconds) {
         setWebDriverWaitWithSeconds(seconds);
         try {
-            webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (Exception e) {
-            System.out.println("TO ADD LOGGER HERE");
+            LogUtils.LOGGER.info(e.getMessage());
         }
     }
 
@@ -46,7 +45,7 @@ public class WaitUtility {
             driver.findElement(by);
             return true;
         } catch (org.openqa.selenium.NoSuchElementException e) {
-            e.getStackTrace();
+            LogUtils.LOGGER.info(e.getMessage());
             return false;
         }
     }

@@ -1,6 +1,7 @@
 package pages;
 
 import configurations.BasePage;
+import configurations.WebDriverFactory;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,12 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class HomePage extends BasePage {
     private By elementLocator = By.cssSelector("[class=\"login\"]");
 
-    public HomePage(String expectedURL) {
-        super(expectedURL);
+    public HomePage() {
+        super(WebDriverFactory.getDriver().getCurrentUrl());
     }
 
-    @Step("click no button")
+    @Step("Click on button")
     public void clickOnElement(){
+        waitUtility.visibilityOfElementNOFail(elementLocator, 5);
         waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementLocator));
         waitUtility.visibilityOfElement(elementLocator, 5);
         webUtility.clickElement(elementLocator);
@@ -22,10 +24,8 @@ public class HomePage extends BasePage {
 
 
     @Step("Text of button")
-    public void getText(){
-        waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementLocator));
-        waitUtility.visibilityOfElement(elementLocator, 5);
-        webUtility.getElementText(elementLocator);
+    public String getElementText(){
+       return webUtility.getElementText(elementLocator);
     }
 
 }

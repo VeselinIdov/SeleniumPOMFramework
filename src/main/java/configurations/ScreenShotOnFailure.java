@@ -1,22 +1,25 @@
 package configurations;
 
-import org.apache.maven.shared.utils.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import utils.LogUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ScreenShotOnFailure {
 
     public static void takeSnapShot() {
-        TakesScreenshot scrShot = ((TakesScreenshot) WebDriverFactory.getDriver());
-        File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-        File DestFile = new File("images\\" + System.currentTimeMillis() + ".png");
         try {
-            FileUtils.copyFile(SrcFile, DestFile);
+            TakesScreenshot scrShot = ((TakesScreenshot) WebDriverFactory.getDriver());
+            File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+            Path destPath = Paths.get("images", System.currentTimeMillis() + ".png");
+            Files.copy(srcFile.toPath(), destPath);
         } catch (IOException e) {
-            e.printStackTrace();
+            LogUtils.LOGGER.info("Failed to capture screenshot: " + e.getMessage());
         }
     }
 }

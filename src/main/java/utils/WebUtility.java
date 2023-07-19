@@ -16,14 +16,11 @@ public class WebUtility {
     }
 
     public void clickElement(By elementBy) {
-        waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementBy));
-        getElementLocator(elementBy).click();
+        waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementBy)).click();
     }
 
     public void enterText(By elementBy, String text) {
-        getElementLocator(elementBy).sendKeys(Keys.CONTROL + "a");
-        getElementLocator(elementBy).sendKeys(Keys.DELETE);
-        getElementLocator(elementBy).sendKeys(text);
+        getElementLocator(elementBy).sendKeys(Keys.chord(Keys.CONTROL, "a"), text);
     }
 
     public WebElement getElementLocator(By elementBy) {

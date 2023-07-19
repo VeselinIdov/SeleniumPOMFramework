@@ -1,4 +1,4 @@
-package configurations.reports;
+package reports;
 
 import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;

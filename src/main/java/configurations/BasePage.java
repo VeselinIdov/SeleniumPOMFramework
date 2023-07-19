@@ -18,6 +18,6 @@ public abstract class BasePage {
     private void onPage(String expectedURL) {
         String currentURL = WebDriverFactory.getDriver().getCurrentUrl();
         Assert.assertTrue(currentURL.contains(expectedURL),
-                "Current URL is: " + currentURL + " Expected URL is: " + expectedURL + "");
+                "Current URL is: " + currentURL + " Expected URL is: " + expectedURL);
     }
 }

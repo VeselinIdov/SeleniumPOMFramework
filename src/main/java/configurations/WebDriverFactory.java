@@ -20,7 +20,7 @@ public class WebDriverFactory {
                 driver.set(WebDriverManager.firefoxdriver().create());
                 break;
             default:
-                throw new IllegalArgumentException("Unsupported browser: " + browser);
+                throw new IllegalArgumentException("Unsupported browser");
         }
           driver.get().manage().window().maximize();
     }

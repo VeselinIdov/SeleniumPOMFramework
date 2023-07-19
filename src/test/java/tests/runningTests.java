@@ -15,7 +15,7 @@ public class runningTests extends BaseTest {
     @Description("some test desciption of test")
     @Test
     void testDropdown() throws Exception {
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage("exampleURL");
         homePage.clickOnElement();
         homePage.getText();
         System.out.println( Thread.currentThread().getId());
@@ -25,7 +25,7 @@ public class runningTests extends BaseTest {
 
     @Test
     void testDropdown1() {
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage("exampleURL");
         homePage.clickOnElement();
         System.out.println( Thread.currentThread().getId());
 

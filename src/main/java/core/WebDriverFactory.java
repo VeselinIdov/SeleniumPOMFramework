@@ -1,6 +1,6 @@
-package configurations;
+package core;
 
-import configurations.config.ConfigurationManager;
+import core.config.ConfigurationManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 

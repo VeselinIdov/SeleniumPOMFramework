@@ -1,8 +1,6 @@
-package reports;
+package core.reports;
 
-import com.github.automatedowl.tools.AllureEnvironmentWriter;
-import com.google.common.collect.ImmutableMap;
-import configurations.WebDriverFactory;
+import core.WebDriverFactory;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -10,7 +8,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static configurations.config.ConfigurationManager.configuration;
 import static org.openqa.selenium.OutputType.BYTES;
 
 public class AllureManager {

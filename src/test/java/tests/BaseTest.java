@@ -1,14 +1,14 @@
 package tests;
 
-import configurations.ScreenShotOnFailure;
-import configurations.WebDriverFactory;
-import configurations.config.ConfigurationManager;
+import core.ScreenShotOnFailure;
+import core.WebDriverFactory;
+import core.config.ConfigurationManager;
 import org.testng.ITestResult;
-import reports.AllureManager;
+import core.reports.AllureManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import utils.Session;
+import core.utils.Session;
 
 public abstract class BaseTest {
 

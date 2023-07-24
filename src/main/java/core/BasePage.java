@@ -1,8 +1,8 @@
-package configurations;
+package core;
 
 import org.testng.Assert;
-import utils.WaitUtility;
-import utils.WebUtility;
+import core.utils.WaitUtility;
+import core.utils.WebUtility;
 
 public abstract class BasePage {
 

@@ -1,6 +1,6 @@
-package utils;
+package core.utils;
 
-import configurations.WebDriverFactory;
+import core.WebDriverFactory;
 import org.openqa.selenium.html5.WebStorage;
 
 public class Session {

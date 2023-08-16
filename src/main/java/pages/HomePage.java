@@ -4,28 +4,22 @@ import core.BasePage;
 import core.WebDriverFactory;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage {
-    private By elementLocator = By.cssSelector("[class=\"login\"]");
+    private By usernameField = By.name("username");
+    private By loginButton = By.xpath("//input[@value=\"Log In\"]");
 
     public HomePage() {
         super(WebDriverFactory.getDriver().getCurrentUrl());
     }
 
+    public void enterUsername(String value){
+        webUtility.enterText(usernameField, value);
+    }
+
     @Step("Click on button")
-    public void clickOnElement(){
-        waitUtility.visibilityOfElementNOFail(elementLocator, 5);
-        waitUtility.getWebDriverWait().until(ExpectedConditions.elementToBeClickable(elementLocator));
-        waitUtility.visibilityOfElement(elementLocator, 5);
-        webUtility.clickElement(elementLocator);
-        System.out.println(webUtility.getElementText(elementLocator));
+    public void clickOnLoginButton(){
+        webUtility.clickElement(loginButton);
+        System.out.println(webUtility.getElementText(loginButton));
     }
-
-
-    @Step("Text of button")
-    public String getElementText(){
-       return webUtility.getElementText(elementLocator);
-    }
-
 }

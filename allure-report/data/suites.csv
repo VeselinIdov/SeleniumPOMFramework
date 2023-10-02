@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jul 21 17:22:26 EEST 2023","Fri Jul 21 17:22:26 EEST 2023","3","Default Suite","SeleniumPOMFramework","tests.RunningTests","tests.RunningTests","testDropdown","testDropdown","some description of test"

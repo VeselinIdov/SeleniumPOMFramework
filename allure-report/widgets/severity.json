@@ -1,0 +1,11 @@
+[ {
+  "uid" : "4eb813f08ff55857",
+  "name" : "testDropdown",
+  "time" : {
+    "start" : 1689949346414,
+    "stop" : 1689949346417,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+} ]

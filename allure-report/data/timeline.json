@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "MBGNW0581",
+    "children" : [ {
+      "name" : "21112@MBGNW0581.main(1)",
+      "children" : [ {
+        "name" : "testDropdown",
+        "uid" : "4eb813f08ff55857",
+        "parentUid" : "2d13fef3f33c1f8ffb9690a65753db93",
+        "status" : "passed",
+        "time" : {
+          "start" : 1689949346414,
+          "stop" : 1689949346417,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2d13fef3f33c1f8ffb9690a65753db93"
+    } ],
+    "uid" : "77e583c14dc727e7b43da2fd49b5dc37"
+  } ]
+}

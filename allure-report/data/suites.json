@@ -1,0 +1,29 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Default Suite",
+    "children" : [ {
+      "name" : "SeleniumPOMFramework",
+      "children" : [ {
+        "name" : "tests.RunningTests",
+        "children" : [ {
+          "name" : "testDropdown",
+          "uid" : "4eb813f08ff55857",
+          "parentUid" : "7528414546c3749e9a15eabdbb62d631",
+          "status" : "passed",
+          "time" : {
+            "start" : 1689949346414,
+            "stop" : 1689949346417,
+            "duration" : 3
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "7528414546c3749e9a15eabdbb62d631"
+      } ],
+      "uid" : "94c2cd7b888b77ab0ea07015cb2064e4"
+    } ],
+    "uid" : "8399274b4bb69ec8699907dd6ef7de4e"
+  } ]
+}

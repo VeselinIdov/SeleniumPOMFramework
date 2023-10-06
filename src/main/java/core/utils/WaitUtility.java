@@ -17,6 +17,7 @@ public class WaitUtility {
     }
 
     private void setWebDriverWaitWithSeconds(int seconds) {
+        LogUtils.LOGGER.info("Waiting element for:" + seconds + "seconds without failing");
         this.webDriverWait = new WebDriverWait(this.driver, Duration.ofSeconds(seconds));
     }
 

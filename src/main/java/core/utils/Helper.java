@@ -8,9 +8,9 @@ public class Helper {
 
     public static void waitForSeconds(int timeoutInSeconds) {
         try {
-            Thread.sleep(timeoutInSeconds * 1000);
+            Thread.sleep(timeoutInSeconds * 1000L);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            LogUtils.LOGGER.info(e.getMessage());
         }
     }
 

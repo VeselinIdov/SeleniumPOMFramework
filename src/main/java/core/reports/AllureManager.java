@@ -1,6 +1,7 @@
 package core.reports;
 
 import core.WebDriverFactory;
+import core.utils.LogUtils;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -33,9 +34,10 @@ public class AllureManager {
 
         File filePath = new File("allure-results/environment.xml");
         try (FileWriter fileWriter = new FileWriter(filePath)) {
+            LogUtils.LOGGER.info("Saving Allure environment data to: " + filePath);
             fileWriter.write(envData);
         } catch (IOException e) {
-            e.printStackTrace();
+            LogUtils.LOGGER.info(e.getMessage());
         }
     }
 

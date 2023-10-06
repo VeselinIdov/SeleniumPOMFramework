@@ -15,6 +15,7 @@ public class ScreenShotOnFailure {
         if (testResult.getStatus() == ITestResult.FAILURE) {
             File scrFile = ((TakesScreenshot) WebDriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
             try {
+                LogUtils.LOGGER.info("Capturing screenshot on failure to '/images' folder");
                 FileUtils.copyFile(scrFile, new File("images", System.currentTimeMillis() + ".png"));
             } catch (IOException e) {
                 LogUtils.LOGGER.info("Failed to capture screenshot: " + e.getMessage());

@@ -1,8 +1,8 @@
 package core.utils;
 
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LogUtils {
-
-    public static final Logger LOGGER = Logger.getLogger(LogUtils.class.getName());
+    public static final Logger LOGGER = LogManager.getLogger(LogUtils.class.getName());
 }

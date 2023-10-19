@@ -18,7 +18,7 @@
         <owner.version>1.0.12</owner.version>
         <datafaker.version>2.0.1</datafaker.version>
         <webdriver-manager.version>5.4.0</webdriver-manager.version>
-        <selenium-java.version>4.10.0</selenium-java.version>
+        <selenium-java.version>4.14.1</selenium-java.version>
         <allure-testng.version>2.23.0</allure-testng.version>
         <testng.version>7.8.0</testng.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
@@ -122,6 +122,27 @@
             <artifactId>allure-testng</artifactId>
             <version>${allure-testng.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.21.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.21.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <reporting>

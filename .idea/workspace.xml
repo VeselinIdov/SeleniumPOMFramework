@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1792a36d-638b-455b-86c7-85ffb8b5ee97" name="Default Changelist" comment="added example test">
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/ScreenShotOnFailure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/ScreenShotOnFailure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/reports/AllureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/reports/AllureManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/WaitUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/WaitUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/WebUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/WebUtility.java" afterDir="false" />
+    <list default="true" id="1792a36d-638b-455b-86c7-85ffb8b5ee97" name="Default Changelist" comment="added log4j 2">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RunningTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RunningTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RunningTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RunningTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,9 +162,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="130" />
@@ -268,20 +265,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_directory_selection": "E:/SeleniumFramework/src/test/java",
-    "last_opened_file_path": "E:/pop-automation-master",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;E:/SeleniumFramework/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/pop-automation-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
@@ -299,6 +296,8 @@
       <recent name="E:\SeleniumFramework\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\SeleniumPOMFramework\src\main\resources" />
+      <recent name="C:\Projects\SeleniumPOMFramework" />
       <recent name="E:\SeleniumFramework\src\main\resources" />
       <recent name="E:\SeleniumFramework" />
       <recent name="E:\SeleniumFramework\src\main\java" />
@@ -313,7 +312,20 @@
       <recent name="pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunningTests.testDropdown">
+  <component name="RunManager" selected="TestNG.RunningTests.loginAsUserTest">
+    <configuration name="HelloWorld2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tests.HelloWorld2" />
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BaseRequests.testName" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <extension name="coverage">
@@ -347,6 +359,60 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunningTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RunningTests" />
+      <option name="METHOD_NAME" value="loginAsUserTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunningTests.loginAsUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RunningTests" />
+      <option name="METHOD_NAME" value="loginAsUserTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
@@ -405,86 +471,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="runningTests2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.runningTests2" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="runningTests2.testDropdown" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.runningTests2" />
-      <option name="METHOD_NAME" value="testDropdown" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="runningTests.testDropdown1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.runningTests" />
-      <option name="METHOD_NAME" value="testDropdown1" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testWith" type="TestNG">
       <module name="SeleniumFramework" />
       <option name="SUITE_NAME" value="" />
@@ -507,21 +493,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.HelloWorld2" />
       <item itemvalue="TestNG.E:/SeleniumFramework/testing.xml" />
       <item itemvalue="TestNG.testWith" />
+      <item itemvalue="TestNG.RunningTests" />
+      <item itemvalue="TestNG.RunningTests.loginAsUserTest" />
       <item itemvalue="TestNG.BaseRequests.testName" />
       <item itemvalue="TestNG.RunningTests.testDropdown" />
-      <item itemvalue="TestNG.runningTests2" />
-      <item itemvalue="TestNG.runningTests2.testDropdown" />
-      <item itemvalue="TestNG.runningTests.testDropdown1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RunningTests.loginAsUserTest" />
+        <item itemvalue="TestNG.RunningTests" />
+        <item itemvalue="Application.HelloWorld2" />
         <item itemvalue="TestNG.RunningTests.testDropdown" />
         <item itemvalue="TestNG.BaseRequests.testName" />
-        <item itemvalue="TestNG.runningTests2.testDropdown" />
-        <item itemvalue="TestNG.runningTests.testDropdown1" />
-        <item itemvalue="TestNG.runningTests2" />
       </list>
     </recent_temporary>
   </component>
@@ -719,7 +705,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692219195861</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added log4j 2">
+      <option name="closed" value="true" />
+      <created>1697733770231</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697733770231</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -816,6 +810,12 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout-to-restore>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:io.qameta.allure:allure-java-commons" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -843,7 +843,9 @@
     <MESSAGE value="API training" />
     <MESSAGE value="updated Utils classes" />
     <MESSAGE value="added example test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added example test" />
+    <MESSAGE value="added" />
+    <MESSAGE value="added log4j 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added log4j 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

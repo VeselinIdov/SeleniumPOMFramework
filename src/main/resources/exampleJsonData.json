@@ -1,11 +1,5 @@
-[
-    {
-        "name":"John",
-        "city":"Berlin",
-        "cars":[
-            "audi",
-            "bmw"
-        ],
-        "job":"Teacher"
-    }
-]
+{
+  "name": "John",
+  "city": "Berlin",
+  "job": "Teacher"
+}

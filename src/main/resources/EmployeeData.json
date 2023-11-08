@@ -1,0 +1,13 @@
+[
+  {
+    "employee": {
+      "name": "John",
+      "age": 30,
+      "city": "New York"
+    },
+    "person": {
+      "name": "John",
+      "age": 30
+    }
+  }
+]

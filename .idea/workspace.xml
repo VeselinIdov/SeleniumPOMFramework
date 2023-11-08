@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1792a36d-638b-455b-86c7-85ffb8b5ee97" name="Default Changelist" comment="added log4j 2">
+    <list default="true" id="1792a36d-638b-455b-86c7-85ffb8b5ee97" name="Default Changelist" comment="added &quot;json reader example">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/EmployeeData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RunningTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RunningTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RunningTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RunningTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/dto/ExampleJsonTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/dto/ExampleJsonTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/reports/AllureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/reports/AllureManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/testdata/RandomJsonDataExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/testdata/RandomJsonDataExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/utils/JsonExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/utils/JSONReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/exampleJsonData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/exampleJsonData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/core/reports/AllureManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/core/reports/AllureManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +320,7 @@
       <recent name="pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunningTests.loginAsUserTest">
+  <component name="RunManager" selected="Application.JsonExampleRunner">
     <configuration name="HelloWorld2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tests.HelloWorld2" />
       <module name="SeleniumFramework" />
@@ -326,29 +334,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BaseRequests.testName" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonExampleRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tests.JsonExampleRunner" />
       <module name="SeleniumFramework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.Response" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="api" />
-      <option name="MAIN_CLASS_NAME" value="api.BaseRequests" />
-      <option name="METHOD_NAME" value="testName" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -493,21 +487,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.JsonExampleRunner" />
       <item itemvalue="Application.HelloWorld2" />
       <item itemvalue="TestNG.E:/SeleniumFramework/testing.xml" />
       <item itemvalue="TestNG.testWith" />
       <item itemvalue="TestNG.RunningTests" />
       <item itemvalue="TestNG.RunningTests.loginAsUserTest" />
-      <item itemvalue="TestNG.BaseRequests.testName" />
       <item itemvalue="TestNG.RunningTests.testDropdown" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JsonExampleRunner" />
         <item itemvalue="TestNG.RunningTests.loginAsUserTest" />
         <item itemvalue="TestNG.RunningTests" />
         <item itemvalue="Application.HelloWorld2" />
         <item itemvalue="TestNG.RunningTests.testDropdown" />
-        <item itemvalue="TestNG.BaseRequests.testName" />
       </list>
     </recent_temporary>
   </component>
@@ -713,7 +707,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697733770231</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added &quot;json reader example">
+      <option name="closed" value="true" />
+      <created>1699033479759</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699033479759</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -845,7 +847,8 @@
     <MESSAGE value="added example test" />
     <MESSAGE value="added" />
     <MESSAGE value="added log4j 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added log4j 2" />
+    <MESSAGE value="added &quot;json reader example" />
+    <option name="LAST_COMMIT_MESSAGE" value="added &quot;json reader example" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

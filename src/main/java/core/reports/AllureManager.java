@@ -3,11 +3,11 @@ package core.reports;
 import core.WebDriverFactory;
 import core.utils.LogUtils;
 import io.qameta.allure.Attachment;
+import lombok.SneakyThrows;
 import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 
 import static org.openqa.selenium.OutputType.BYTES;
 
@@ -16,6 +16,7 @@ public class AllureManager {
     private AllureManager() {
     }
 
+    @SneakyThrows
     public static void setAllureEnvironmentInformation() {
         String envData = "<environment>" +
                 "    <parameter>" +
@@ -36,13 +37,11 @@ public class AllureManager {
         try (FileWriter fileWriter = new FileWriter(filePath)) {
             LogUtils.LOGGER.info("Saving Allure environment data to: " + filePath);
             fileWriter.write(envData);
-        } catch (IOException e) {
-            LogUtils.LOGGER.info(e.getMessage());
         }
     }
 
     @Attachment(value = "Failed test screenshot", type = "image/png")
-    public static byte[] takeScreenshotToAttachOnAllureReport() {
-        return ((TakesScreenshot) WebDriverFactory.getDriver()).getScreenshotAs(BYTES);
+    public static void takeScreenshotToAttachOnAllureReport() {
+        ((TakesScreenshot) WebDriverFactory.getDriver()).getScreenshotAs(BYTES);
     }
 }

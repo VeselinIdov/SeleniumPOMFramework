@@ -1,5 +1,6 @@
-package core.utils;
+package web.utils;
 
+import core.utils.LogUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

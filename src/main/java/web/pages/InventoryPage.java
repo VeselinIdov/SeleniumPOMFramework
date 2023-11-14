@@ -1,9 +1,6 @@
-package pages;
+package web.pages;
 
-import core.BasePage;
-import core.WebDriverFactory;
-import core.config.Configuration;
-import core.config.ConfigurationManager;
+import core.configurations.ConfigurationManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

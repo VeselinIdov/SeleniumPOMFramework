@@ -1,14 +1,14 @@
-package tests;
+package web.utils;
 
-import core.ScreenShotOnFailure;
-import core.WebDriverFactory;
-import core.config.ConfigurationManager;
+import core.utils.ScreenShotOnFailure;
+import core.configurations.ConfigurationManager;
 import org.testng.ITestResult;
 import core.reports.AllureManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import core.utils.Session;
+import web.utils.SessionCleaner;
+import web.utils.WebDriverFactory;
 
 public abstract class BaseTest {
 
@@ -21,8 +21,8 @@ public abstract class BaseTest {
     public void testSetup() {
         WebDriverFactory.createDriverInstance();
         WebDriverFactory.getDriver().navigate().to(ConfigurationManager.configuration().getUrl());
-        Session.clearLocalStorage();
-        Session.clearSessionStorage();
+        SessionCleaner.clearLocalStorage();
+        SessionCleaner.clearSessionStorage();
     }
 
     @AfterMethod

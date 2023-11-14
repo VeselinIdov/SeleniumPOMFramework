@@ -1,9 +1,10 @@
-package core;
+package web.pages;
 
 import core.utils.LogUtils;
 import org.testng.Assert;
-import core.utils.WaitUtility;
-import core.utils.WebUtility;
+import web.utils.WaitUtility;
+import web.utils.WebDriverFactory;
+import web.utils.WebUtility;
 
 public abstract class BasePage {
 

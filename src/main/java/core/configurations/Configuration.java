@@ -1,4 +1,4 @@
-package core.config;
+package core.configurations;
 
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.LoadPolicy;

@@ -1,10 +1,10 @@
-package core;
+package core.utils;
 
+import web.utils.WebDriverFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
-import core.utils.LogUtils;
 
 import java.io.File;
 import java.io.IOException;

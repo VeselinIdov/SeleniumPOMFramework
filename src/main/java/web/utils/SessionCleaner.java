@@ -1,9 +1,10 @@
-package core.utils;
+package web.utils;
 
-import core.WebDriverFactory;
+import core.utils.LogUtils;
 import org.openqa.selenium.html5.WebStorage;
+import web.utils.WebDriverFactory;
 
-public class Session {
+public class SessionCleaner {
 
     public static void clearSessionStorage() {
         WebStorage webStorage = (WebStorage) WebDriverFactory.getDriver();

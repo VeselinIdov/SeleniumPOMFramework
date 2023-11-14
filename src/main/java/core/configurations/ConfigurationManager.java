@@ -1,4 +1,4 @@
-package core.config;
+package core.configurations;
 
 import org.aeonbits.owner.ConfigCache;
 

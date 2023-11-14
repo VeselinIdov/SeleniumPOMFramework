@@ -1,7 +1,7 @@
 package core.testdata;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import core.dto.ExampleJsonTestData;
+import core.objects.ExampleJsonTestData;
 import core.utils.JSONReader;
 import lombok.SneakyThrows;
 

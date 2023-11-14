@@ -1,4 +1,4 @@
-package core.dto;
+package core.objects;
 
 import lombok.Getter;
 import lombok.Setter;

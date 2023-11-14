@@ -1,6 +1,6 @@
 package core.reports;
 
-import core.WebDriverFactory;
+import web.utils.WebDriverFactory;
 import core.utils.LogUtils;
 import io.qameta.allure.Attachment;
 import lombok.SneakyThrows;

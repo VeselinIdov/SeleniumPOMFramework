@@ -4,7 +4,7 @@
 
     <test name="tests" >
         <classes>
-            <class name="tests.RunningTests" />
+            <class name="tests.APITests" />
         </classes>
     </test>
 

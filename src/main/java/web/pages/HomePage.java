@@ -1,5 +1,6 @@
 package web.pages;
 
+import web.base.BasePage;
 import web.utils.WebDriverFactory;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

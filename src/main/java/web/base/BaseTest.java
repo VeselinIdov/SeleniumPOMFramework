@@ -1,4 +1,4 @@
-package web.utils;
+package web.base;
 
 import core.utils.ScreenShotOnFailure;
 import core.configurations.ConfigurationManager;

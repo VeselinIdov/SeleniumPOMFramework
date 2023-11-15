@@ -1,4 +1,4 @@
-package web.pages;
+package web.base;
 
 import core.utils.LogUtils;
 import org.testng.Assert;

@@ -3,6 +3,7 @@ package web.pages;
 import core.configurations.ConfigurationManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import web.base.BasePage;
 
 import java.util.List;
 

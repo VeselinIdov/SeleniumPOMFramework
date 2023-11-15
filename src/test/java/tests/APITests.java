@@ -1,5 +1,6 @@
 package tests;
 
+import api.pojo.EmployeeRequestPayload;
 import api.pojo.EmployeeResponseBody;
 import api.requests.EmployeeRequests;
 import core.utils.JSONUtils;
@@ -11,7 +12,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class APITests{
+public class APITests {
 
     @Severity(SeverityLevel.MINOR)
     @Description("some description of test")
@@ -24,5 +25,14 @@ public class APITests{
         System.out.println(responseBody.getMessage());
         System.out.println(responseBody.getStatus());
         System.out.println(responseBody.getData().getName());
-}
+    }
+
+    @Test
+    public void CreateEmployeeTest() {
+        EmployeeRequestPayload employeeRequestPayload = new EmployeeRequestPayload();
+        employeeRequestPayload.setAge("15");
+        employeeRequestPayload.setName("test");
+        employeeRequestPayload.setSalary("1234");
+        Response response = new EmployeeRequests().createEmployee(employeeRequestPayload);
+    }
 }

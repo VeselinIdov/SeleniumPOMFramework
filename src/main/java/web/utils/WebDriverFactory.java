@@ -2,7 +2,6 @@ package web.utils;
 
 import core.configurations.ConfigurationManager;
 import core.utils.LogUtils;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

@@ -17,7 +17,6 @@
         <allure-environment-writer.version>1.0.0</allure-environment-writer.version>
         <owner.version>1.0.12</owner.version>
         <datafaker.version>2.1.0</datafaker.version>
-        <webdriver-manager.version>5.6.3</webdriver-manager.version>
         <selenium-java.version>4.17.0</selenium-java.version>
         <allure-testng.version>2.25.0</allure-testng.version>
         <testng.version>7.9.0</testng.version>
@@ -52,13 +51,6 @@
         </plugins>
     </build>
     <dependencies>
-
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdriver-manager.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>

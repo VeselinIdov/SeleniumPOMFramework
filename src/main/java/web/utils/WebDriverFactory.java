@@ -4,6 +4,8 @@ import core.configurations.ConfigurationManager;
 import core.utils.LogUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverFactory {
 
@@ -15,10 +17,10 @@ public class WebDriverFactory {
     public static void createDriverInstance() {
         switch (ConfigurationManager.configuration().getBrowser()) {
             case "chrome":
-                driver.set(WebDriverManager.chromedriver().create());
+                driver.set(new ChromeDriver());
                 break;
             case "firefox":
-                driver.set(WebDriverManager.firefoxdriver().create());
+                driver.set(new FirefoxDriver());
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported browser");

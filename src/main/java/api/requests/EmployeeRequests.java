@@ -1,7 +1,7 @@
 package api.requests;
 
 import api.base.BaseRequest;
-import api.pojo.EmployeeRequestPayload;
+import api.pojo.EmployeeRequestRecord;
 import io.restassured.response.Response;
 
 public class EmployeeRequests extends BaseRequest {
@@ -20,11 +20,11 @@ public class EmployeeRequests extends BaseRequest {
         return this.getRequest(GET_EMPLOYEE_PATH_WITH_PARAM + "/{id}", id);
     }
 
-    public Response createEmployee(EmployeeRequestPayload employeeRequestBody) {
+    public Response createEmployee(EmployeeRequestRecord employeeRequestBody) {
         return this.postRequest(CREATE_EMPLOYEE_PATH, employeeRequestBody);
     }
 
-    public Response updateEmployee(EmployeeRequestPayload employeeRequestBody, String id) {
+    public Response updateEmployee(EmployeeRequestRecord employeeRequestBody, String id) {
         return this.putRequest(UPDATE_EMPLOYEE_PATH_WITH_PARAM, employeeRequestBody, id);
     }
 

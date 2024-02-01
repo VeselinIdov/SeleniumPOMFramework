@@ -11,19 +11,22 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <suiteXmlFile>src/main/resources/testing.xml</suiteXmlFile>
-        <aspectj.version>1.9.19</aspectj.version>
-        <allure.version>2.23.0</allure.version>
+        <aspectj.version>1.9.21</aspectj.version>
+        <allure.version>2.25.0</allure.version>
         <allure-maven.version>2.11.2</allure-maven.version>
         <allure-environment-writer.version>1.0.0</allure-environment-writer.version>
         <owner.version>1.0.12</owner.version>
-        <datafaker.version>2.0.1</datafaker.version>
-        <webdriver-manager.version>5.4.0</webdriver-manager.version>
-        <selenium-java.version>4.14.1</selenium-java.version>
-        <allure-testng.version>2.23.0</allure-testng.version>
-        <testng.version>7.8.0</testng.version>
+        <datafaker.version>2.1.0</datafaker.version>
+        <webdriver-manager.version>5.6.3</webdriver-manager.version>
+        <selenium-java.version>4.17.0</selenium-java.version>
+        <allure-testng.version>2.25.0</allure-testng.version>
+        <testng.version>7.9.0</testng.version>
         <log4j.version>2.21.0</log4j.version>
-        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <lombok.version>1.18.30</lombok.version>
+        <rest-assured.version>5.4.0</rest-assured.version>
+        <jackson.version>2.16.1</jackson.version>
+        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
 
     </properties>
     <build>
@@ -137,33 +140,21 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.9</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.15.3</version>
+            <version>${jackson.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
+            <version>${rest-assured.version}</version>
         </dependency>
     </dependencies>
 

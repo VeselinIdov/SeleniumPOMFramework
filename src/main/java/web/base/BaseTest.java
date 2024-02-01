@@ -7,7 +7,6 @@ import core.reports.AllureManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import web.utils.SessionCleaner;
 import web.utils.WebDriverFactory;
 
 public abstract class BaseTest {
@@ -21,8 +20,6 @@ public abstract class BaseTest {
     public void testSetup() {
         WebDriverFactory.createDriverInstance();
         WebDriverFactory.getDriver().navigate().to(ConfigurationManager.configuration().getUrl());
-        SessionCleaner.clearLocalStorage();
-        SessionCleaner.clearSessionStorage();
     }
 
     @AfterMethod

@@ -20,4 +20,3 @@ api/pojo/EmployeeRequestPayload.class
 core/utils/LogUtils.class
 web/base/BaseTest.class
 core/objects/ExampleJsonTestData.class
-web/utils/SessionCleaner.class

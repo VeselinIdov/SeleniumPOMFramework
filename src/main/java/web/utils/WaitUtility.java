@@ -2,6 +2,7 @@ package web.utils;
 
 import core.utils.LogUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,7 +29,6 @@ public class WaitUtility {
 
     public void visibilityOfElement(By locator, int seconds) {
         setWebDriverWaitWithSeconds(seconds);
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
@@ -45,7 +45,7 @@ public class WaitUtility {
         try {
             driver.findElement(by);
             return true;
-        } catch (org.openqa.selenium.NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             LogUtils.LOGGER.info(e.getMessage());
             return false;
         }

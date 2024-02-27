@@ -20,12 +20,7 @@ public class APITests {
     void getEmployeeTest() {
         Response response = new EmployeeRequests().getEmployees();
         Assert.assertEquals(response.statusCode(), StatusCode.SUCCESS.getValue());
-        System.out.println(response.asPrettyString());
         EmployeeResponseBody responseBody = JSONUtils.deserializeResponse(response.asPrettyString(), EmployeeResponseBody.class);
-
-        System.out.println(response.statusCode());
-        System.out.println(responseBody.getStatus());
-        System.out.println(responseBody.getData());
     }
 
     @Test

@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Generate Allure Report') {
             steps {
-                sh 'mvn io.qameta.allure:allure-maven:2.10.0:report -Dallure.results_pattern=target/allure-results'
+                sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
             }
             post {
                 always {
@@ -30,4 +30,3 @@ pipeline {
         }
     }
 }
-

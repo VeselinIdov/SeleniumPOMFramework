@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'MavenInstallation'
+        maven 'MavenInstallation' // Replace 'MavenInstallationName' with the name you provided in Global Tool Configuration
     }
     stages {
         stage('Build') {
@@ -13,12 +13,21 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
+        }
+        stage('Generate Allure Report') {
+            steps {
+                sh 'mvn io.qameta.allure:allure-maven:2.10.0:report -Dallure.results_pattern=target/allure-results'
+            }
             post {
                 always {
-                    // Publish TestNG results
-                    step([$class: 'TestNGResultArchiver', testngReportsPattern: 'target/surefire-reports/testng-results.xml'])
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        results: [[path: 'target/allure-results']]
+                    ])
                 }
             }
         }
     }
 }
+

@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'MavenInstallation'
+    }
     stages {
         stage('Build') {
             steps {
@@ -8,12 +11,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test' // This will run TestNG tests using Maven
+                sh 'mvn test'
             }
             post {
                 always {
                     // Publish TestNG results
-                    junit 'target/surefire-reports/*.xml'
+                    step([$class: 'TestNGResultArchiver', testngReportsPattern: 'target/surefire-reports/testng-results.xml'])
                 }
             }
         }

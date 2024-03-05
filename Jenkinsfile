@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'MavenInstallation' // Replace 'MavenInstallationName' with the name you provided in Global Tool Configuration
+        maven 'MavenInstallation'
     }
     stages {
         stage('Build') {

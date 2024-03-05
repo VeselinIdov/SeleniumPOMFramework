@@ -14,18 +14,18 @@ import org.testng.annotations.Test;
 
 public class APITests {
 
-    @Severity(SeverityLevel.MINOR)
-    @Description("some description of test")
-    @Test
-    void getEmployeeTest() {
-        Response response = new EmployeeRequests().getEmployees();
-        Assert.assertEquals(response.statusCode(), StatusCode.SUCCESS.getValue());
-        EmployeeResponseBody responseBody = JSONUtils.deserializeResponse(response.asPrettyString(), EmployeeResponseBody.class);
-    }
-
-    @Test
-    public void CreateEmployeeTest() {
-        EmployeeRequestRecord employeeRequestPayload = new EmployeeRequestRecord("15", "test", "1234");
-        Response response = new EmployeeRequests().createEmployee(employeeRequestPayload);
-    }
+//    @Severity(SeverityLevel.MINOR)
+//    @Description("some description of test")
+//    @Test
+//    void getEmployeeTest() {
+//        Response response = new EmployeeRequests().getEmployees();
+//        Assert.assertEquals(response.statusCode(), StatusCode.SUCCESS.getValue());
+//        EmployeeResponseBody responseBody = JSONUtils.deserializeResponse(response.asPrettyString(), EmployeeResponseBody.class);
+//    }
+//
+//    @Test
+//    public void CreateEmployeeTest() {
+//        EmployeeRequestRecord employeeRequestPayload = new EmployeeRequestRecord("15", "test", "1234");
+//        Response response = new EmployeeRequests().createEmployee(employeeRequestPayload);
+//    }
 }

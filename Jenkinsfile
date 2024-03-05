@@ -18,8 +18,7 @@ pipeline {
             steps {
                 script {
                     sh 'mkdir -p target/allure-results'
-//                     sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
-                    sh 'allure generate --clean --output target/allure-results'
+                    sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
                 }
             }
             post {

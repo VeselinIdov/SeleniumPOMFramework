@@ -11,13 +11,15 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'rm -rf target/allure-results'
-                sh 'mvn test'
+                sh 'mvn clean test'
             }
         }
         stage('Generate Allure Report') {
             steps {
-                sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
+                script {
+                    sh 'rm -rf target/allure-results'
+                    sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
+                }
             }
             post {
                 always {

@@ -17,7 +17,7 @@ pipeline {
         stage('Generate Allure Report') {
             steps {
                 script {
-                    sh 'rm -rf target/allure-results'
+                    sh 'mkdir -p target/allure-results'
                     sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
                 }
             }

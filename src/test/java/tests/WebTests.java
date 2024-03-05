@@ -18,11 +18,12 @@ public class WebTests extends BaseTest {
             homePage.loginAsUser("standard_user", "secret_sauce");
         }
 
-//    @Test
-//    public void clickActionsExamples() throws InterruptedException {
-//            HomePage homePage = new HomePage();
-//            homePage.acceptCookie();
-//            homePage.triggerAlert();
-//            Thread.sleep(5000);
-//    }
+    @Severity(SeverityLevel.MINOR)
+    @Description("some descriptionsome descriptionsome descriptionsome descriptionsome description")
+    @Test
+    public void clickActionsExamples() throws InterruptedException {
+            HomePage homePage = new HomePage();
+            homePage.acceptCookie();
+            homePage.triggerAlert();
+    }
 }

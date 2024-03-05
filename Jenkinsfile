@@ -11,6 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'rm -rf target/allure-results'
                 sh 'mvn test'
             }
         }

@@ -14,20 +14,27 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
-        stage('Generate Allure Report') {
-            steps {
-                script {
-                    sh 'mkdir -p target/allure-results'
-                    sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
+    }
+
+    post {
+        always {
+            stage('Generate Allure Report') {
+                steps {
+                    script {
+                        sh 'mkdir -p target/allure-results'
+                        sh 'mvn io.qameta.allure:allure-maven:2.11.2:report'
+                    }
                 }
             }
-            post {
-                always {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        results: [[path: '/allure-results']]
-                    ])
+            stage('Publish Allure Report') {
+                steps {
+                    script {
+                        allure([
+                            includeProperties: false,
+                            jdk: '',
+                            results: [[path: 'target/allure-results']]
+                        ])
+                    }
                 }
             }
         }

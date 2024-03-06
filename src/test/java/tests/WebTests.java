@@ -20,7 +20,7 @@ public class WebTests extends BaseTest {
         }
 
     @Severity(SeverityLevel.MINOR)
-    @Description("some descriptionsome descriptionsome descriptionsome descriptionsome description")
+    @Description("some  descriptionsome descriptionsome descriptionsome description")
     @Test
     public void clickActionsExamples() {
         Assert.fail();

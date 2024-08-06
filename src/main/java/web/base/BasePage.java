@@ -12,10 +12,14 @@ public abstract class BasePage {
     protected WebUtility webUtility;
 
     public BasePage(String expectedURL) {
-        this.waitUtility = new WaitUtility(WebDriverFactory.getDriver());
-        this.webUtility = new WebUtility(WebDriverFactory.getDriver(), waitUtility);
+        this();
         LogUtils.LOGGER.info("Validating page with expected URL: " + expectedURL);
         onPage(expectedURL);
+    }
+
+    public BasePage() {
+        this.waitUtility = new WaitUtility(WebDriverFactory.getDriver());
+        this.webUtility = new WebUtility(WebDriverFactory.getDriver(), waitUtility);
     }
 
     private void onPage(String expectedURL) {

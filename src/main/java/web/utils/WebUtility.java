@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
+import java.util.Random;
 
 public class WebUtility {
 
@@ -32,11 +33,13 @@ public class WebUtility {
         return driver.findElement(elementBy);
     }
 
-    public List<WebElement> getAllElements(By elementBy) {
+    public List<WebElement> getElementsLocator(By elementBy) {
+        LogUtils.LOGGER.info("Getting elements locator: " + elementBy);
         return driver.findElements(elementBy);
     }
 
     public String getElementText(By elementBy) {
+        LogUtils.LOGGER.info("Getting element text: " + elementBy);
         return getElementLocator(elementBy).getText();
     }
 
@@ -60,38 +63,52 @@ public class WebUtility {
         actions.contextClick(webElement).perform();
     }
 
-    public void acceptAlert(){
+    public void acceptAlert() {
         Alert alert = driver.switchTo().alert();
         LogUtils.LOGGER.info("Accepting alert with text: " + alert.getText());
         alert.accept();
     }
 
-    public void gettingAlertText(){
+    public void gettingAlertText() {
         Alert alert = driver.switchTo().alert();
         LogUtils.LOGGER.info("Getting alert text equal to: " + alert.getText());
         alert.getText();
     }
 
-    public void cancelAlert(){
+    public void cancelAlert() {
         Alert alert = driver.switchTo().alert();
         LogUtils.LOGGER.info("Dismissing alert with text: " + alert.getText());
         alert.dismiss();
     }
 
-    public void sendKeysToAlertAndAccept(String text){
+    public void sendKeysToAlertAndAccept(String text) {
         Alert alert = driver.switchTo().alert();
         LogUtils.LOGGER.info("SendKeys to alert with text and accept it: " + alert.getText());
         alert.sendKeys(text);
         alert.accept();
     }
 
-    public void switchToFrameByIndex(int index){
+    public void switchToFrameByIndex(int index) {
         LogUtils.LOGGER.info("Switching to frame with index: " + index);
         driver.switchTo().frame(index);
     }
 
-    public void switchToDefaultContent(){
+    public void switchToDefaultContent() {
         LogUtils.LOGGER.info("Switching to default content");
         driver.switchTo().defaultContent();
+    }
+
+    public static String selectRandomValueFromDropDown(WebElement dropdown, List<WebElement> options) {
+        if (options.isEmpty()) {
+            throw new IllegalArgumentException("Dropdown options list is empty.");
+        }
+
+        dropdown.click();
+        LogUtils.LOGGER.info("Clicked on the dropdown to expand.");
+        int randomIndex = new Random().nextInt(options.size());
+        WebElement selectedOption = options.get(randomIndex);
+        selectedOption.click();
+        LogUtils.LOGGER.info("Selected option: " + selectedOption.getText());
+        return selectedOption.getText();
     }
 }

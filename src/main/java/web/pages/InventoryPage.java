@@ -36,7 +36,7 @@ public class InventoryPage extends BasePage {
     }
 
     public void clickOnButtons() {
-        List<WebElement> buttons = webUtility.getAllElements(addCartButtonsList);
+        List<WebElement> buttons = webUtility.getElementsLocator(addCartButtonsList);
         for (WebElement webElement : buttons) {
             webElement.click();
         }

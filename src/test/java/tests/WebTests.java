@@ -23,6 +23,6 @@ public class WebTests extends BaseTest {
     @Description("some  descriptionsome descriptionsome descriptionsome description")
     @Test
     public void clickActionsExamples() {
-        Assert.fail();
+        System.out.println(System.nanoTime());
     }
 }

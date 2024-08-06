@@ -1,9 +1,7 @@
 package web.utils;
 
 import core.utils.LogUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,8 +16,7 @@ public class WaitUtility {
         this.driver = driver;
     }
 
-    private void setWebDriverWaitWithSeconds(int seconds) {
-        LogUtils.LOGGER.info("Waiting element for:" + seconds + "seconds without failing");
+    private void setWebDriverWait(int seconds) {
         this.webDriverWait = new WebDriverWait(this.driver, Duration.ofSeconds(seconds));
     }
 
@@ -28,25 +25,28 @@ public class WaitUtility {
     }
 
     public void visibilityOfElement(By locator, int seconds) {
-        setWebDriverWaitWithSeconds(seconds);
+        setWebDriverWait(seconds);
+        LogUtils.LOGGER.info("Waiting for element to be visible within seconds: " + seconds);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public void visibilityOfElementNOFail(By locator, int seconds) {
-        setWebDriverWaitWithSeconds(seconds);
+        setWebDriverWait(seconds);
         try {
+            LogUtils.LOGGER.info("Waiting for element to be visible: " + seconds);
             webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        } catch (Exception e) {
+        } catch (TimeoutException e) {
             LogUtils.LOGGER.info(e.getMessage());
         }
     }
 
-    public boolean isElementDisplayed(By by) {
+    public boolean isElementDisplayed(By locator) {
         try {
-            driver.findElement(by);
-            return true;
+            boolean isDisplayed = driver.findElement(locator).isDisplayed();
+            LogUtils.LOGGER.info("Element located by " + locator + " is displayed: " + isDisplayed);
+            return isDisplayed;
         } catch (NoSuchElementException e) {
-            LogUtils.LOGGER.info(e.getMessage());
+            LogUtils.LOGGER.info("Element located by " + locator + " is not displayed.");
             return false;
         }
     }

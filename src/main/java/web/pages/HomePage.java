@@ -1,7 +1,5 @@
 package web.pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import web.base.BasePage;
 import web.utils.WebDriverFactory;
 import io.qameta.allure.Step;
@@ -21,30 +19,30 @@ public class HomePage extends BasePage {
 
     @Step("Login as user")
     public void loginAsUser(String username, String password) {
-        webUtility.enterText(usernameField, username);
-        webUtility.enterText(passwordField, password);
-        webUtility.clickElement(loginButton);
+        loggingWebActionsDecorator.enterText(usernameField, username);
+        loggingWebActionsDecorator.enterText(passwordField, password);
+        loggingWebActionsDecorator.clickElement(loginButton);
     }
 
     public void performDoubleClick(){
-        webUtility.performDoubleClick(doubleClickButton);
+        loggingWebActionsDecorator.performDoubleClick(doubleClickButton);
     }
 
     public void performRightClick(){
-        webUtility.performRightClick(doubleClickButton);
+        loggingWebActionsDecorator.performRightClick(doubleClickButton);
     }
 
     public void acceptCookie(){
         waitUtility.visibilityOfElementNOFail(cookieButton,10);
-        webUtility.clickElement(cookieButton);
+        loggingWebActionsDecorator.clickElement(cookieButton);
     }
 
     public void triggerAlert(){
-        webUtility.clickElement(alertButton);
-        webUtility.sendKeysToAlertAndAccept("random");
+        loggingWebActionsDecorator.clickElement(alertButton);
+        loggingWebActionsDecorator.sendKeysToAlertAndAccept("random");
     }
 
     public void frame(){
-        webUtility.switchToFrameByIndex(1);
+        loggingWebActionsDecorator.switchToFrameByIndex(1);
     }
 }

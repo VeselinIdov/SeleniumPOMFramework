@@ -20,23 +20,23 @@ public class InventoryPage extends BasePage {
     }
 
     public void removeItemFromCart() {
-        webUtility.clickElement(removeItem);
+        loggingWebActionsDecorator.clickElement(removeItem);
     }
 
     public void navigateToCartPage() {
-        webUtility.clickElement(cartIcon);
+        loggingWebActionsDecorator.clickElement(cartIcon);
     }
 
     public void addItemToCart() {
-        webUtility.clickElement(addToCartButton);
+        loggingWebActionsDecorator.clickElement(addToCartButton);
     }
 
     public String getItemText() {
-        return webUtility.getElementText(getItemText);
+        return loggingWebActionsDecorator.getElementText(getItemText);
     }
 
     public void clickOnButtons() {
-        List<WebElement> buttons = webUtility.getElementsLocator(addCartButtonsList);
+        List<WebElement> buttons = loggingWebActionsDecorator.getElementsLocator(addCartButtonsList);
         for (WebElement webElement : buttons) {
             webElement.click();
         }
